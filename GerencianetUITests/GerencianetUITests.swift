@@ -2,7 +2,7 @@
 //  GerencianetUITests.swift
 //  GerencianetUITests
 //
-//  Created by Gabriel Petrovick on 07/08/21.
+//  Created by Fabiana Petrovick on 07/08/21.
 //  Copyright © 2021 Fabiana Petrovick. All rights reserved.
 //
 
