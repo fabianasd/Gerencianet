@@ -10,110 +10,157 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gerencianet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="gerencianet" translatesAutoresizingMaskIntoConstraints="NO" id="F29-c6-TwE">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
-                                <color key="backgroundColor" red="1" green="0.49485838409999999" blue="0.0" alpha="0.5685199058219178" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="RfD-wv-Mit">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="437"/>
+                                <color key="backgroundColor" red="0.91757327318191528" green="0.76717674732208252" blue="0.5513271689414978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gerencianet" translatesAutoresizingMaskIntoConstraints="NO" id="zhZ-2N-zC4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="r9s-q2-eOF"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xJ-nA-sUK">
-                                <rect key="frame" x="10" y="356" width="355" height="65"/>
-                                <color key="backgroundColor" red="1" green="0.49568037730580616" blue="0.034339691710045694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="      Acessar conta">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="byi-sI-e3n">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="437"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Ali-Vd-Gml"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="4g4-kC-us4"/>
                                 <connections>
-                                    <action selector="acessarConta:" destination="BYZ-38-t0r" eventType="touchDragInside" id="hmT-Gg-Brq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ykm-Xc-WdD"/>
                                 </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="a9H-Mv-mB0">
+                                <rect key="frame" x="33" y="281" width="76" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="fLM-hX-76R"/>
+                                    <constraint firstAttribute="height" constant="37" id="gyV-3c-sHl"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xJ-nA-sUK">
+                                <rect key="frame" x="10" y="339" width="355" height="49"/>
+                                <color key="backgroundColor" red="1" green="0.49568037730580616" blue="0.034339691710045694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="uFx-yP-9yi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="  Acessar conta" image="person" catalog="system">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-AI-nwq">
-                                <rect key="frame" x="10" y="430" width="355" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-AI-nwq">
+                                <rect key="frame" x="10" y="411" width="355" height="49"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="loH-31-RUV"/>
+                                    <constraint firstAttribute="height" constant="49" id="Aio-Km-1La"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="        Abrir uma conta">
+                                <state key="normal" title="  Abrir uma conta" image="person.badge.plus" catalog="system">
                                     <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                             </button>
-                            <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="person.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Jv-ZY-rPz">
-                                <rect key="frame" x="93" y="438" width="43" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FVh-ME-qPV">
-                                <rect key="frame" x="101" y="369" width="35" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precisa de ajuda?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjK-UN-6gJ">
-                                <rect key="frame" x="111" y="572" width="68" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="nBY-NN-Jdb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Termos de uso" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfJ-HD-3JC">
-                                <rect key="frame" x="190" y="572" width="74" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="message.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vOa-w7-Y1e">
-                                <rect key="frame" x="122" y="532.5" width="46" height="36"/>
-                                <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="NvW-qe-jsV"/>
-                                    <constraint firstAttribute="height" constant="37" id="RrC-nH-rfa"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" image="doc.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x8l-WE-nQD">
-                                <rect key="frame" x="202" y="531.5" width="51" height="37"/>
-                                <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="TopLeft" distribution="fillEqually" alignment="center" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RX8-5p-DHb">
+                                <rect key="frame" x="16" y="522" width="343" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jMA-94-Tto">
+                                        <rect key="frame" x="0.0" y="13" width="114.5" height="24"/>
+                                        <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-23"/>
+                                        <inset key="imageEdgeInsets" minX="12" minY="-40" maxX="-100" maxY="8"/>
+                                        <state key="normal" image="message.circle" catalog="system">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Precisa de ajuda?">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="18"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAE-mi-3mD">
+                                        <rect key="frame" x="114.5" y="13" width="114" height="24"/>
+                                        <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-20" maxX="0.0" maxY="-23"/>
+                                        <inset key="imageEdgeInsets" minX="12" minY="-40" maxX="-35" maxY="8"/>
+                                        <state key="normal" image="suit.diamond.fill" catalog="system">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="PIX">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="system" size="18"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2G-Jb-MQh">
+                                        <rect key="frame" x="228.5" y="13" width="114.5" height="24"/>
+                                        <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-23"/>
+                                        <inset key="imageEdgeInsets" minX="12" minY="-40" maxX="-100" maxY="8"/>
+                                        <state key="normal" image="doc.circle" catalog="system">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Termos de uso">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" metaFont="system" size="18"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="F29-c6-TwE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="00f-rz-CFr"/>
-                            <constraint firstItem="x8l-WE-nQD" firstAttribute="top" secondItem="F29-c6-TwE" secondAttribute="bottom" constant="29" id="6PL-c5-cbg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DfJ-HD-3JC" secondAttribute="bottom" constant="10" id="6V2-JT-OON"/>
-                            <constraint firstItem="ee7-AI-nwq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Aqt-T8-mve"/>
-                            <constraint firstItem="vOa-w7-Y1e" firstAttribute="centerY" secondItem="x8l-WE-nQD" secondAttribute="centerY" id="BHP-lX-hy7"/>
-                            <constraint firstItem="ee7-AI-nwq" firstAttribute="top" secondItem="4xJ-nA-sUK" secondAttribute="bottom" constant="9" id="Dsu-h4-nAg"/>
-                            <constraint firstItem="F29-c6-TwE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GVf-va-3tz"/>
-                            <constraint firstItem="SjK-UN-6gJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="I8c-IK-aeX"/>
-                            <constraint firstItem="DfJ-HD-3JC" firstAttribute="leading" secondItem="SjK-UN-6gJ" secondAttribute="trailing" constant="11" id="LnO-kp-u0U"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SjK-UN-6gJ" secondAttribute="bottom" constant="10" id="SYQ-vf-Rdn"/>
-                            <constraint firstItem="DfJ-HD-3JC" firstAttribute="leading" secondItem="SjK-UN-6gJ" secondAttribute="trailing" constant="11" id="TPD-11-L0R"/>
-                            <constraint firstItem="F29-c6-TwE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WaF-iX-vl1"/>
-                            <constraint firstItem="F29-c6-TwE" firstAttribute="centerX" secondItem="ee7-AI-nwq" secondAttribute="centerX" id="dfb-WH-IM8"/>
-                            <constraint firstItem="SjK-UN-6gJ" firstAttribute="firstBaseline" secondItem="DfJ-HD-3JC" secondAttribute="firstBaseline" id="ghB-J0-yiJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DfJ-HD-3JC" secondAttribute="trailing" constant="111" id="ioA-Ea-gte"/>
-                            <constraint firstItem="ee7-AI-nwq" firstAttribute="leading" secondItem="4xJ-nA-sUK" secondAttribute="leading" id="n1l-lq-RTp"/>
-                            <constraint firstItem="F29-c6-TwE" firstAttribute="centerX" secondItem="4xJ-nA-sUK" secondAttribute="centerX" id="nRl-TE-TN9"/>
-                            <constraint firstItem="SjK-UN-6gJ" firstAttribute="centerX" secondItem="vOa-w7-Y1e" secondAttribute="centerX" id="pEu-mg-5wK"/>
-                            <constraint firstItem="vOa-w7-Y1e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="rZ7-GA-guu"/>
-                            <constraint firstItem="x8l-WE-nQD" firstAttribute="top" secondItem="ee7-AI-nwq" secondAttribute="bottom" constant="41" id="rox-bf-uZ0"/>
-                            <constraint firstItem="x8l-WE-nQD" firstAttribute="leading" secondItem="vOa-w7-Y1e" secondAttribute="trailing" constant="34" id="s4e-zx-UVs"/>
-                            <constraint firstItem="DfJ-HD-3JC" firstAttribute="top" secondItem="x8l-WE-nQD" secondAttribute="bottom" constant="3" id="yIL-xD-VYZ"/>
-                            <constraint firstItem="DfJ-HD-3JC" firstAttribute="centerX" secondItem="x8l-WE-nQD" secondAttribute="centerX" constant="1" id="yhF-ww-by9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ee7-AI-nwq" secondAttribute="trailing" constant="10" id="2QM-4J-Q68"/>
+                            <constraint firstItem="ee7-AI-nwq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="2RC-s7-EOp"/>
+                            <constraint firstItem="RX8-5p-DHb" firstAttribute="top" secondItem="ee7-AI-nwq" secondAttribute="bottom" constant="62" id="5VT-BS-LkY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RX8-5p-DHb" secondAttribute="bottom" constant="46" id="9L6-jZ-avz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a9H-Mv-mB0" secondAttribute="trailing" constant="266" id="Ev6-8c-yut"/>
+                            <constraint firstItem="RX8-5p-DHb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Is7-SW-JdZ"/>
+                            <constraint firstItem="zhZ-2N-zC4" firstAttribute="centerX" secondItem="RX8-5p-DHb" secondAttribute="centerX" id="Rb2-R6-M29"/>
+                            <constraint firstItem="zhZ-2N-zC4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZBI-SY-oNj"/>
+                            <constraint firstItem="a9H-Mv-mB0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="b0d-zt-FGw"/>
+                            <constraint firstItem="RfD-wv-Mit" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bOD-fv-Q0p"/>
+                            <constraint firstItem="4xJ-nA-sUK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iJK-r6-EuT"/>
+                            <constraint firstItem="4xJ-nA-sUK" firstAttribute="top" secondItem="a9H-Mv-mB0" secondAttribute="bottom" constant="21" id="jyA-c6-iY5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4xJ-nA-sUK" secondAttribute="trailing" constant="10" id="kBH-nh-DBS"/>
+                            <constraint firstItem="RfD-wv-Mit" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lZR-Cy-CL6"/>
+                            <constraint firstItem="zhZ-2N-zC4" firstAttribute="trailing" secondItem="RfD-wv-Mit" secondAttribute="trailing" id="mLD-5s-nJ9"/>
+                            <constraint firstItem="zhZ-2N-zC4" firstAttribute="leading" secondItem="RfD-wv-Mit" secondAttribute="leading" id="oqj-f2-Vqw"/>
+                            <constraint firstItem="a9H-Mv-mB0" firstAttribute="top" secondItem="zhZ-2N-zC4" secondAttribute="bottom" constant="148" id="r7n-c2-iKm"/>
+                            <constraint firstItem="ee7-AI-nwq" firstAttribute="top" secondItem="4xJ-nA-sUK" secondAttribute="bottom" constant="23" id="sGN-ZS-r16"/>
+                            <constraint firstItem="RfD-wv-Mit" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x4g-Ue-uvp"/>
+                            <constraint firstItem="RX8-5p-DHb" firstAttribute="top" secondItem="RfD-wv-Mit" secondAttribute="bottom" constant="85" id="zYE-Gh-78k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pageControl" destination="a9H-Mv-mB0" id="6cL-QM-sp5"/>
+                        <outlet property="scrollView" destination="byi-sI-e3n" id="RFF-Ul-NQP"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.40000000000001" y="136.28185907046478"/>
+            <point key="canvasLocation" x="143.19999999999999" y="106.59670164917542"/>
         </scene>
     </scenes>
     <resources>
@@ -122,5 +169,6 @@
         <image name="message.circle" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.badge.plus" catalog="system" width="128" height="116"/>
+        <image name="suit.diamond.fill" catalog="system" width="107" height="128"/>
     </resources>
 </document>
