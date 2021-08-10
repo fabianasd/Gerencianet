@@ -13,14 +13,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="bottom" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7d-oF-2B1">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="455"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.76472645309999998" blue="0.45189130440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&quot;Soluções para descomplicar a gestão financeira, pensadas para você e seu negócio.&quot;" translatesAutoresizingMaskIntoConstraints="NO" id="8Wc-E8-1XN">
                     <rect key="frame" x="10" y="172" width="318" height="155"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" red="1" green="0.76472645309999998" blue="0.45189130440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="155" id="gp0-Wd-al6"/>
                     </constraints>
-                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
@@ -32,7 +37,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="labelTitle" destination="8Wc-E8-1XN" id="u8l-29-SqR"/>
+                <outlet property="labelTitle" destination="8Wc-E8-1XN" id="jna-aV-Cib"/>
             </connections>
             <point key="canvasLocation" x="112.8" y="133.5832083958021"/>
         </view>
