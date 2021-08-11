@@ -13,13 +13,12 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="bottom" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7d-oF-2B1">
+                <view contentMode="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="e7d-oF-2B1">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="455"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.76472645309999998" blue="0.45189130440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="&quot;Soluções para descomplicar a gestão financeira, pensadas para você e seu negócio.&quot;" translatesAutoresizingMaskIntoConstraints="NO" id="8Wc-E8-1XN">
-                    <rect key="frame" x="10" y="172" width="318" height="155"/>
+                    <rect key="frame" x="10" y="147" width="318" height="155"/>
                     <color key="backgroundColor" red="1" green="0.76472645309999998" blue="0.45189130440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="155" id="gp0-Wd-al6"/>
@@ -31,7 +30,11 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8Wc-E8-1XN" secondAttribute="bottom" constant="340" id="Nxm-7m-fBi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="e7d-oF-2B1" secondAttribute="bottom" constant="212" id="0yi-mv-gxv"/>
+                <constraint firstItem="e7d-oF-2B1" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="FBV-0t-7lB"/>
+                <constraint firstItem="e7d-oF-2B1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JIa-sP-pFa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8Wc-E8-1XN" secondAttribute="bottom" constant="365" id="Nxm-7m-fBi"/>
+                <constraint firstItem="e7d-oF-2B1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="SpS-ld-tib"/>
                 <constraint firstItem="8Wc-E8-1XN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="gM6-KH-xlP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Wc-E8-1XN" secondAttribute="trailing" constant="47" id="z2J-m4-Sh0"/>
             </constraints>
