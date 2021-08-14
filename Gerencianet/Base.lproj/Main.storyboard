@@ -55,7 +55,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                                 <connections>
-                                    <action selector="acessarCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RWM-CT-fKs"/>
+                                    <action selector="reactionListButtonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="sV6-Go-F8o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-AI-nwq">
@@ -157,8 +157,8 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="acessarCard" destination="4xJ-nA-sUK" id="AEq-yB-xsf"/>
                         <outlet property="pageControl" destination="a9H-Mv-mB0" id="6cL-QM-sp5"/>
+                        <outlet property="reactionListButtonTapped" destination="4xJ-nA-sUK" id="MDT-L6-fbO"/>
                         <outlet property="scrollView" destination="byi-sI-e3n" id="RFF-Ul-NQP"/>
                     </connections>
                 </viewController>
@@ -177,50 +177,48 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zzp-9g-XrW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <view contentMode="scaleToFill" restorationIdentifier="ReactionViewController" translatesAutoresizingMaskIntoConstraints="NO" id="Erp-Hx-m1P">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFk-1f-8eQ">
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFk-1f-8eQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIw-Dl-9pc">
-                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="263" width="375" height="404"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="gIw-Dl-9pc" firstAttribute="top" secondItem="6cb-rT-3HC" secondAttribute="top" constant="200" id="C7n-Ja-kaX"/>
-                            <constraint firstItem="Zzp-9g-XrW" firstAttribute="top" secondItem="6cb-rT-3HC" secondAttribute="top" id="FT4-gt-0kc"/>
+                            <constraint firstItem="gIw-Dl-9pc" firstAttribute="top" secondItem="6cb-rT-3HC" secondAttribute="top" constant="263" id="C7n-Ja-kaX"/>
+                            <constraint firstItem="Zzp-9g-XrW" firstAttribute="top" secondItem="6Om-Ap-idc" secondAttribute="top" id="FT4-gt-0kc"/>
                             <constraint firstItem="gIw-Dl-9pc" firstAttribute="leading" secondItem="6cb-rT-3HC" secondAttribute="leading" id="GPG-rf-peC"/>
                             <constraint firstItem="Zzp-9g-XrW" firstAttribute="leading" secondItem="6cb-rT-3HC" secondAttribute="leading" id="K4r-oO-rIl"/>
                             <constraint firstItem="6cb-rT-3HC" firstAttribute="trailing" secondItem="RFk-1f-8eQ" secondAttribute="trailing" id="KFz-7K-sck"/>
                             <constraint firstItem="RFk-1f-8eQ" firstAttribute="leading" secondItem="6cb-rT-3HC" secondAttribute="leading" id="UJ2-sh-HSi"/>
-                            <constraint firstItem="6cb-rT-3HC" firstAttribute="bottom" secondItem="Zzp-9g-XrW" secondAttribute="bottom" id="W4s-b0-0GV"/>
-                            <constraint firstItem="6cb-rT-3HC" firstAttribute="bottom" secondItem="gIw-Dl-9pc" secondAttribute="bottom" id="WMs-XB-R3m"/>
+                            <constraint firstItem="Zzp-9g-XrW" firstAttribute="bottom" secondItem="6Om-Ap-idc" secondAttribute="bottom" id="W4s-b0-0GV"/>
+                            <constraint firstItem="gIw-Dl-9pc" firstAttribute="bottom" secondItem="6Om-Ap-idc" secondAttribute="bottom" id="WMs-XB-R3m"/>
                             <constraint firstAttribute="bottom" secondItem="RFk-1f-8eQ" secondAttribute="bottom" id="XNl-W6-rjL"/>
-                            <constraint firstItem="Erp-Hx-m1P" firstAttribute="top" secondItem="6cb-rT-3HC" secondAttribute="top" id="XoZ-Hf-btf"/>
-                            <constraint firstItem="6cb-rT-3HC" firstAttribute="trailing" secondItem="Erp-Hx-m1P" secondAttribute="trailing" id="gF2-1z-0mM"/>
-                            <constraint firstItem="Erp-Hx-m1P" firstAttribute="leading" secondItem="6cb-rT-3HC" secondAttribute="leading" id="o7J-ee-SGp"/>
                             <constraint firstItem="6cb-rT-3HC" firstAttribute="trailing" secondItem="gIw-Dl-9pc" secondAttribute="trailing" id="oK6-Pm-gI2"/>
-                            <constraint firstItem="6cb-rT-3HC" firstAttribute="bottom" secondItem="Erp-Hx-m1P" secondAttribute="bottom" id="u1q-i3-wey"/>
                             <constraint firstItem="6cb-rT-3HC" firstAttribute="trailing" secondItem="Zzp-9g-XrW" secondAttribute="trailing" id="veG-IJ-C2N"/>
                             <constraint firstItem="RFk-1f-8eQ" firstAttribute="top" secondItem="6cb-rT-3HC" secondAttribute="top" id="vxf-HZ-og2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6cb-rT-3HC"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BCk-yq-Obs" appends="YES" id="KnQ-rL-BcW"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="1ZH-z2-SL9"/>
                     <connections>
-                        <outlet property="Dimmer" destination="RFk-1f-8eQ" id="kFk-cG-ayH"/>
-                        <outlet property="cardConstraint" destination="C7n-Ja-kaX" id="wsi-ul-zac"/>
+                        <outlet property="cardConstraint" destination="C7n-Ja-kaX" id="d77-4F-bUb"/>
+                        <outlet property="dimmer" destination="RFk-1f-8eQ" id="9YQ-Oc-BvB"/>
                         <outlet property="imageView" destination="Zzp-9g-XrW" id="Yh7-Ze-rlD"/>
-                        <outlet property="viewCard" destination="Erp-Hx-m1P" id="BVU-Ym-7Wo"/>
+                        <outlet property="viewCard" destination="gIw-Dl-9pc" id="ETy-ES-nM9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmr-0b-IBa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="BCk-yq-Obs"/>
             </objects>
-            <point key="canvasLocation" x="858" y="110"/>
+            <point key="canvasLocation" x="856.79999999999995" y="109.29535232383809"/>
         </scene>
     </scenes>
     <resources>

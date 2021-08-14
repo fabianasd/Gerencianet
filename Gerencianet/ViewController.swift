@@ -11,11 +11,15 @@ import UIKit
 class ViewController: UIViewController, UIScrollViewDelegate {
     
     
+    @IBOutlet weak var reactionListButtonTapped: UIButton!
+    
     @IBOutlet weak var scrollView: UIScrollView!{
         didSet{
             scrollView.delegate = self
         }
     }
+    
+     var currentSnapshotImage: UIImage?
     
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -33,6 +37,34 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    
+    @IBAction func reactionListButtonTapped(_ sender: UIButton) {
+            guard let reactionVC = storyboard?.instantiateViewController(withIdentifier: "ReactionViewController")
+                as? ReactionViewController else {
+                    
+                    assertionFailure("No view controller ID ReactionViewController in storyboard")
+                    return
+            }
+        
+        // set the modal presentation to full screen, in iOS 13, its no longer full screen by default
+        reactionVC.backingImage = self.view.asImage()
+        
+        // present the view controller modally without animation
+        self.present(reactionVC, animated: false, completion: nil)
+            
+//            // take a snapshot of current view and set it as backingImage
+//             reactionVC.imagePrint = self.view.asImage()
+//
+//            // Delay the capture of snapshot by 0.1 seconds
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1 , execute: {
+//            // capture the whole view including tab bar
+//          //  reactionVC.backingImage = self.tabBarController?.view.asImage()
+//
+//            // present the view controller modally without animation
+//            self.present(reactionVC, animated: false, completion: nil)
+//        })
     }
     
     func createSlides() -> [Slide] {
