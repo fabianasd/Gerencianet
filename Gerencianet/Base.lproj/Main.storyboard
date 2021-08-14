@@ -181,6 +181,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XqE-sB-vYT">
+                                <rect key="frame" x="147.5" y="247" width="80" height="6"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="XW5-rD-7JQ"/>
+                                    <constraint firstAttribute="width" constant="80" id="iOd-hN-X1B"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIw-Dl-9pc">
                                 <rect key="frame" x="0.0" y="263" width="375" height="404"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -198,6 +206,8 @@
                             <constraint firstItem="Zzp-9g-XrW" firstAttribute="bottom" secondItem="6Om-Ap-idc" secondAttribute="bottom" id="W4s-b0-0GV"/>
                             <constraint firstItem="gIw-Dl-9pc" firstAttribute="bottom" secondItem="6Om-Ap-idc" secondAttribute="bottom" id="WMs-XB-R3m"/>
                             <constraint firstAttribute="bottom" secondItem="RFk-1f-8eQ" secondAttribute="bottom" id="XNl-W6-rjL"/>
+                            <constraint firstItem="XqE-sB-vYT" firstAttribute="centerX" secondItem="6Om-Ap-idc" secondAttribute="centerX" id="i0R-W3-tjz"/>
+                            <constraint firstItem="gIw-Dl-9pc" firstAttribute="top" secondItem="XqE-sB-vYT" secondAttribute="bottom" constant="10" id="me4-eN-77s"/>
                             <constraint firstItem="6cb-rT-3HC" firstAttribute="trailing" secondItem="gIw-Dl-9pc" secondAttribute="trailing" id="oK6-Pm-gI2"/>
                             <constraint firstItem="6cb-rT-3HC" firstAttribute="trailing" secondItem="Zzp-9g-XrW" secondAttribute="trailing" id="veG-IJ-C2N"/>
                             <constraint firstItem="RFk-1f-8eQ" firstAttribute="top" secondItem="6cb-rT-3HC" secondAttribute="top" id="vxf-HZ-og2"/>
@@ -210,6 +220,7 @@
                     <navigationItem key="navigationItem" id="1ZH-z2-SL9"/>
                     <connections>
                         <outlet property="cardConstraint" destination="C7n-Ja-kaX" id="d77-4F-bUb"/>
+                        <outlet property="cardLine" destination="XqE-sB-vYT" id="y3j-zq-SL0"/>
                         <outlet property="dimmer" destination="RFk-1f-8eQ" id="9YQ-Oc-BvB"/>
                         <outlet property="imageView" destination="Zzp-9g-XrW" id="Yh7-Ze-rlD"/>
                         <outlet property="viewCard" destination="gIw-Dl-9pc" id="ETy-ES-nM9"/>

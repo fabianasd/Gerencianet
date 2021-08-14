@@ -13,3 +13,4 @@ class Slide: UIView {
     @IBOutlet weak var labelTitle: UITextView!
     
 }
+
