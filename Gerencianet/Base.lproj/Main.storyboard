@@ -191,7 +191,48 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIw-Dl-9pc">
                                 <rect key="frame" x="0.0" y="263" width="375" height="404"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="CNA-nS-duP">
+                                        <rect key="frame" x="8" y="8" width="359" height="86"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBD-1c-7vf">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite seu CPF ou e-mail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTQ-Kc-UYg">
+                                                <rect key="frame" x="0.0" y="26.5" width="359" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GuJ-5h-rwK">
+                                                <rect key="frame" x="0.0" y="52" width="359" height="34"/>
+                                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsk-Bg-OnN">
+                                        <rect key="frame" x="0.0" y="121" width="375" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="AVANÇAR">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="CNA-nS-duP" firstAttribute="top" secondItem="gIw-Dl-9pc" secondAttribute="top" constant="8" id="5x0-BZ-Twm"/>
+                                    <constraint firstAttribute="trailing" secondItem="CNA-nS-duP" secondAttribute="trailing" constant="8" id="6Lh-hv-oFj"/>
+                                    <constraint firstItem="CNA-nS-duP" firstAttribute="leading" secondItem="gIw-Dl-9pc" secondAttribute="leading" constant="8" id="9W7-Ix-ELI"/>
+                                    <constraint firstItem="Fsk-Bg-OnN" firstAttribute="leading" secondItem="gIw-Dl-9pc" secondAttribute="leading" id="FR4-J7-Pha"/>
+                                    <constraint firstItem="Fsk-Bg-OnN" firstAttribute="top" secondItem="CNA-nS-duP" secondAttribute="bottom" constant="27" id="Fxb-tS-rOT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fsk-Bg-OnN" secondAttribute="trailing" id="pK4-FF-ZZB"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -223,6 +264,7 @@
                         <outlet property="cardLine" destination="XqE-sB-vYT" id="y3j-zq-SL0"/>
                         <outlet property="dimmer" destination="RFk-1f-8eQ" id="9YQ-Oc-BvB"/>
                         <outlet property="imageView" destination="Zzp-9g-XrW" id="Yh7-Ze-rlD"/>
+                        <outlet property="labelCPF" destination="CTQ-Kc-UYg" id="iHa-9h-678"/>
                         <outlet property="viewCard" destination="gIw-Dl-9pc" id="ETy-ES-nM9"/>
                     </connections>
                 </viewController>
