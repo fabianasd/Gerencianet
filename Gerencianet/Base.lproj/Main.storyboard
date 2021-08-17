@@ -304,8 +304,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJt-2E-ZXr">
                                 <rect key="frame" x="0.0" y="263" width="375" height="404"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="5iN-Ox-gpD">
-                                        <rect key="frame" x="8" y="8" width="359" height="97"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="5iN-Ox-gpD">
+                                        <rect key="frame" x="8" y="8" width="359" height="141"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abrir uma conta Gerencianet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa9-I4-b8g">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
@@ -314,9 +314,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CpF-fn-Fzc">
-                                                <rect key="frame" x="0.0" y="21.5" width="359" height="21"/>
+                                                <rect key="frame" x="0.0" y="34.5" width="359" height="26"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="Adj-O1-45w"/>
+                                                    <constraint firstAttribute="height" constant="25" id="Adj-O1-45w"/>
                                                 </constraints>
                                                 <segments>
                                                     <segment title="Pessoa Física"/>
@@ -324,13 +324,13 @@
                                                 </segments>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite seu CPF" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b5-D2-O0o">
-                                                <rect key="frame" x="0.0" y="42.5" width="359" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="73.5" width="359" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o48-An-Xe5">
-                                                <rect key="frame" x="0.0" y="63" width="359" height="34"/>
+                                                <rect key="frame" x="0.0" y="107" width="359" height="34"/>
                                                 <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -338,7 +338,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUy-f9-Wnp">
-                                        <rect key="frame" x="0.0" y="121" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="165" width="375" height="30"/>
                                         <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="AVANÇAR">
