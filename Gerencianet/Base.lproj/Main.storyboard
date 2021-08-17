@@ -55,7 +55,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                                 <connections>
-                                    <action selector="reactionListButtonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="sV6-Go-F8o"/>
+                                    <action selector="accessAccountButton:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Gma-hh-r0r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee7-AI-nwq">
@@ -71,7 +71,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Mte-O8-swR" kind="show" id="eAS-MO-4iI"/>
+                                    <action selector="openAccountController:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="PvQ-Ts-pYa"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="TopLeft" distribution="fillEqually" alignment="center" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RX8-5p-DHb">
@@ -160,8 +160,9 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="accessAccountButton" destination="4xJ-nA-sUK" id="Fv0-hq-HcU"/>
+                        <outlet property="openAccountButton" destination="ee7-AI-nwq" id="c4D-N2-RdO"/>
                         <outlet property="pageControl" destination="a9H-Mv-mB0" id="6cL-QM-sp5"/>
-                        <outlet property="reactionListButtonTapped" destination="4xJ-nA-sUK" id="MDT-L6-fbO"/>
                         <outlet property="scrollView" destination="byi-sI-e3n" id="RFF-Ul-NQP"/>
                     </connections>
                 </viewController>
@@ -169,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="143.19999999999999" y="106.59670164917542"/>
         </scene>
-        <!--Reaction View Controller-->
+        <!--Access Account Controller-->
         <scene sceneID="uM9-mm-KRg">
             <objects>
-                <viewController storyboardIdentifier="ReactionViewController" id="nkB-Mi-zeW" customClass="ReactionViewController" customModule="Gerencianet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccessAccountController" id="nkB-Mi-zeW" customClass="AccessAccountController" customModule="Gerencianet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Om-Ap-idc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,6 +215,7 @@
                                                 <rect key="frame" x="0.0" y="52" width="359" height="34"/>
                                                 <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -267,7 +269,7 @@
                         <outlet property="cardLine" destination="XqE-sB-vYT" id="y3j-zq-SL0"/>
                         <outlet property="dimmer" destination="RFk-1f-8eQ" id="9YQ-Oc-BvB"/>
                         <outlet property="imageView" destination="Zzp-9g-XrW" id="Yh7-Ze-rlD"/>
-                        <outlet property="labelCPF" destination="CTQ-Kc-UYg" id="iHa-9h-678"/>
+                        <outlet property="labelCPFEmail" destination="CTQ-Kc-UYg" id="Mpx-bf-Lat"/>
                         <outlet property="viewCard" destination="gIw-Dl-9pc" id="ETy-ES-nM9"/>
                     </connections>
                 </viewController>
@@ -276,10 +278,10 @@
             </objects>
             <point key="canvasLocation" x="791" y="-282"/>
         </scene>
-        <!--Abrir Conta Controller-->
+        <!--Open Account Controller-->
         <scene sceneID="A9R-w0-LbM">
             <objects>
-                <viewController storyboardIdentifier="AbrirContaController" id="Mte-O8-swR" customClass="AbrirContaController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OpenAccountController" id="Mte-O8-swR" customClass="OpenAccountController" customModule="Gerencianet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xrf-Ny-x9Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,6 +332,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o48-An-Xe5">
                                                 <rect key="frame" x="0.0" y="63" width="359" height="34"/>
                                                 <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                         </subviews>
@@ -378,6 +381,14 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="jDz-bo-ilt"/>
+                    <connections>
+                        <outlet property="cardConstraints" destination="xx9-HM-7Mb" id="WyN-h8-O0Y"/>
+                        <outlet property="cardView" destination="UJt-2E-ZXr" id="B7x-Hp-r2P"/>
+                        <outlet property="cardViewLine" destination="BX8-oJ-Zfg" id="anh-Gv-HYw"/>
+                        <outlet property="dimmerView" destination="Tah-Mh-muI" id="dJy-LW-VsO"/>
+                        <outlet property="imagePrint" destination="uXS-5j-jy6" id="PK8-gZ-IJe"/>
+                        <outlet property="labelCPFCNPJ" destination="6b5-D2-O0o" id="woj-Xt-JMt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hy8-5R-6ZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="DcX-Kf-CNu"/>

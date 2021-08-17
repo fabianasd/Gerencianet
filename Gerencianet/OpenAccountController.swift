@@ -1,39 +1,37 @@
 //
-//  ReactionViewController.swift
+//  OpenAccountController.swift
 //  Gerencianet
 //
-//  Created by Fabiana Petrovick on 12/08/21.
+//  Created by Fabiana Petrovick on 16/08/21.
 //  Copyright © 2021 Fabiana Petrovick. All rights reserved.
 //
 
 import UIKit
 
-class ReactionViewController: UIViewController {
+class OpenAccountController: UIViewController {
+    //IBOutlets
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var dimmer: UIView!
-    @IBOutlet weak var viewCard: UIView!
-    @IBOutlet weak var cardLine: UIView!
+    @IBOutlet weak var imagePrint: UIImageView!
+    @IBOutlet weak var dimmerView: UIView!
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var cardViewLine: UIView!
     
-    @IBOutlet weak var cardConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cardConstraints: NSLayoutConstraint!
     
-    @IBOutlet weak var labelCPF: UILabel!
-    
+    @IBOutlet weak var labelCPFCNPJ: UILabel!
     
     var backingImage: UIImage?
     
     override func viewDidLoad() {
-        configLabel()
+        configLabelCPFCNPJ()
         configCard()
     }
-    
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showCard()
     }
     
-    fileprivate func configLabel() {
+    fileprivate func configLabelCPFCNPJ() {
         let boldAttribute = [
             NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
         ]
@@ -44,45 +42,38 @@ class ReactionViewController: UIViewController {
         let regularText = NSAttributedString(string: "Digite seu " , attributes: regularAttribute)
         
         let boldText = NSAttributedString(string: "CPF", attributes: boldAttribute)
-        
-        let regularText1 = NSAttributedString(string: " ou " , attributes: regularAttribute)
-        
-        let boldText1 = NSAttributedString(string: "e-mail", attributes: boldAttribute)
-        
-        
+       
         let newString = NSMutableAttributedString()
         newString.append(regularText)
         newString.append(boldText)
         
-        newString.append(regularText1)
-        newString.append(boldText1)
-        labelCPF.attributedText = newString
+        labelCPFCNPJ.attributedText = newString
     }
     
     fileprivate func configCard() {
-        imageView.image = backingImage
+        imagePrint.image = backingImage
         
-        viewCard.clipsToBounds = true
-        viewCard.layer.cornerRadius = 10.0
-        viewCard.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        cardView.clipsToBounds = true
+        cardView.layer.cornerRadius = 10.0
+        cardView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         
-        cardLine.clipsToBounds = true
-        cardLine.layer.cornerRadius = 3
-        cardLine.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        cardViewLine.clipsToBounds = true
+        cardViewLine.layer.cornerRadius = 3
+        cardViewLine.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         
         // hide the card view at the bottom when the View first load
         if let safeAreaHeight = UIApplication.shared.keyWindow?.safeAreaLayoutGuide.layoutFrame.size.height,
             let bottomPadding = UIApplication.shared.keyWindow?.safeAreaInsets.bottom {
-            cardConstraint.constant = safeAreaHeight + bottomPadding
+            cardConstraints.constant = safeAreaHeight + bottomPadding
         }
         
         // set dimmerview to transparent
-        dimmer.alpha = 0.0
+        dimmerView.alpha = 0.0
         
         // dimmerViewTapped() will be called when user tap on the dimmer view
         let dimmerTap = UITapGestureRecognizer(target: self, action: #selector(dimmerViewTapped(_:)))
-        dimmer.addGestureRecognizer(dimmerTap)
-        dimmer.isUserInteractionEnabled = true
+        dimmerView.addGestureRecognizer(dimmerTap)
+        dimmerView.isUserInteractionEnabled = true
     }
     
     // @IBAction is required in front of the function name due to how selector works
@@ -102,7 +93,7 @@ class ReactionViewController: UIViewController {
             let bottomPadding = UIApplication.shared.keyWindow?.safeAreaInsets.bottom {
             
             // move the card view to bottom of screen
-            cardConstraint.constant = safeAreaHeight + bottomPadding
+            cardConstraints.constant = safeAreaHeight + bottomPadding
         }
         
         // move card down to bottom
@@ -114,7 +105,7 @@ class ReactionViewController: UIViewController {
         // hide dimmer view
         // this will animate the dimmerView alpha together with the card move down animation
         hideCard.addAnimations {
-            self.dimmer.alpha = 0.0
+            self.dimmerView.alpha = 0.0
         }
         
         // when the animation completes, (position == .end means the animation has ended)
@@ -145,7 +136,7 @@ class ReactionViewController: UIViewController {
             
             // when card state is normal, its top distance to safe area is
             // (safe area height + bottom inset) / 2.0
-            cardConstraint.constant = (safeAreaHeight + bottomPadding) / 3.0
+            cardConstraints.constant = (safeAreaHeight + bottomPadding) / 3.0
         }
         
         // move card up from bottom by telling the app to refresh the frame/position of view
@@ -157,7 +148,7 @@ class ReactionViewController: UIViewController {
         // show dimmer view
         // this will animate the dimmerView alpha together with the card move up animation
         showCard.addAnimations({
-            self.dimmer.alpha = 0.7
+            self.dimmerView.alpha = 0.7
         })
         
         // run the animation
