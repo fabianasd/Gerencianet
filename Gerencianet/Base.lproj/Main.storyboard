@@ -305,7 +305,7 @@
                                 <rect key="frame" x="0.0" y="263" width="375" height="404"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="5iN-Ox-gpD">
-                                        <rect key="frame" x="8" y="8" width="359" height="141"/>
+                                        <rect key="frame" x="8" y="8" width="359" height="141.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abrir uma conta Gerencianet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa9-I4-b8g">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
@@ -322,15 +322,34 @@
                                                     <segment title="Pessoa Física"/>
                                                     <segment title="Pessoa Jurídica"/>
                                                 </segments>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                        <color key="value" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="segmentedControl:" destination="Mte-O8-swR" eventType="valueChanged" id="Lyx-6D-lTd"/>
+                                                </connections>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite seu CPF" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b5-D2-O0o">
-                                                <rect key="frame" x="0.0" y="73.5" width="359" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-200" translatesAutoresizingMaskIntoConstraints="NO" id="2A7-K5-eXD">
+                                                <rect key="frame" x="0.0" y="73.5" width="359" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite seu " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbI-Ix-cbV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="279.5" height="20"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPF" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6b5-D2-O0o">
+                                                        <rect key="frame" x="79.5" y="0.0" width="279.5" height="20"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o48-An-Xe5">
-                                                <rect key="frame" x="0.0" y="107" width="359" height="34"/>
+                                                <rect key="frame" x="0.0" y="107.5" width="359" height="34"/>
                                                 <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -338,7 +357,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUy-f9-Wnp">
-                                        <rect key="frame" x="0.0" y="165" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="165.5" width="375" height="30"/>
                                         <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="AVANÇAR">
@@ -388,12 +407,14 @@
                         <outlet property="dimmerView" destination="Tah-Mh-muI" id="dJy-LW-VsO"/>
                         <outlet property="imagePrint" destination="uXS-5j-jy6" id="PK8-gZ-IJe"/>
                         <outlet property="labelCPFCNPJ" destination="6b5-D2-O0o" id="woj-Xt-JMt"/>
+                        <outlet property="labelOpenAccount" destination="Qa9-I4-b8g" id="P3n-5P-aYz"/>
+                        <outlet property="segmentedControl" destination="CpF-fn-Fzc" id="jXe-ug-EvE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hy8-5R-6ZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="DcX-Kf-CNu"/>
             </objects>
-            <point key="canvasLocation" x="790" y="382"/>
+            <point key="canvasLocation" x="789.60000000000002" y="381.85907046476763"/>
         </scene>
     </scenes>
     <resources>

@@ -15,39 +15,56 @@ class OpenAccountController: UIViewController {
     @IBOutlet weak var dimmerView: UIView!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var cardViewLine: UIView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     @IBOutlet weak var cardConstraints: NSLayoutConstraint!
     
     @IBOutlet weak var labelCPFCNPJ: UILabel!
+    @IBOutlet weak var labelOpenAccount: UILabel!
     
     var backingImage: UIImage?
     
     override func viewDidLoad() {
-        configLabelCPFCNPJ()
         configCard()
+        openAccount()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showCard()
     }
     
-    fileprivate func configLabelCPFCNPJ() {
+    @IBAction func segmentedControl(_ sender: Any) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            labelCPFCNPJ.text = "CPF"
+        case 1:
+            labelCPFCNPJ.text = "CNPJ"
+        default:
+            break
+        }
+        labelCPFCNPJ.textColor = .darkGray
+    }
+    
+    fileprivate func openAccount() {
+        
         let boldAttribute = [
             NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
         ]
         let regularAttribute = [
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 18.0)!
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue", size: 18.0)!
         ]
         
-        let regularText = NSAttributedString(string: "Digite seu " , attributes: regularAttribute)
+        let regularText = NSAttributedString(string: "Abrir uma conta " , attributes: regularAttribute)
         
-        let boldText = NSAttributedString(string: "CPF", attributes: boldAttribute)
-       
+        let boldText = NSAttributedString(string: "Gerencianet", attributes: boldAttribute)
+        
         let newString = NSMutableAttributedString()
         newString.append(regularText)
         newString.append(boldText)
         
-        labelCPFCNPJ.attributedText = newString
+        labelOpenAccount.attributedText = newString
+        labelOpenAccount.textColor = .darkGray
     }
     
     fileprivate func configCard() {
@@ -154,5 +171,6 @@ class OpenAccountController: UIViewController {
         // run the animation
         showCard.startAnimation()
     }
-    
+
 }
+
