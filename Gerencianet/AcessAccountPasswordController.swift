@@ -17,14 +17,16 @@ class AcessAccountPasswordController: UIViewController {
     @IBOutlet weak var lineCard: UIView!
     @IBOutlet weak var cardConstraint: NSLayoutConstraint!
     @IBOutlet weak var labelPassword: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var labelTermosDeUso: UILabel!
     
     var backingImage: UIImage?
     
     override func viewDidLoad() {
         configLabelPassword()
         configCard()
+        configTermosDeUso()
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -49,6 +51,39 @@ class AcessAccountPasswordController: UIViewController {
         newString.append(boldText)
         
         labelPassword.attributedText = newString
+    }
+    
+    fileprivate func configTermosDeUso() {
+        let boldAttributeTermos = [
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 11.0)!,
+            .foregroundColor : UIColor.systemBlue,
+        ]
+
+        let regularAttributeTermos = [
+            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 11.0)!
+        ]
+        
+        let regularText = NSAttributedString(string: "Este acesso é protegido pelo reCAPTCHA e está sujeito a " , attributes: regularAttributeTermos)
+        
+        let boldText = NSAttributedString(string: "Política de privacidade ", attributes: boldAttributeTermos)
+        
+        let regularText2 = NSAttributedString(string: "e aos " , attributes: regularAttributeTermos)
+        
+        let boldText2 = NSAttributedString(string: "Termos de serviço ", attributes: boldAttributeTermos)
+        
+        let regularText3 = NSAttributedString(string: "do Google." , attributes: regularAttributeTermos)
+        
+        
+        let newString = NSMutableAttributedString()
+        
+        newString.append(regularText)
+        newString.append(boldText)
+        newString.append(regularText2)
+        newString.append(boldText2)
+        newString.append(regularText3)
+        
+        
+        labelTermosDeUso.attributedText = newString
     }
     
     fileprivate func configCard() {
@@ -127,6 +162,20 @@ class AcessAccountPasswordController: UIViewController {
         })
         
         showCard.startAnimation()
+    }
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        print("aquii")
+        guard let reactionVC = storyboard?.instantiateViewController(withIdentifier: "AccessAccountController")
+            as? AccessAccountController else {
+                
+                assertionFailure("No view controller ID AccessCountController in storyboard")
+                return
+        }
+        
+        reactionVC.backingImage = self.view.asImage()
+        
+        self.present(reactionVC, animated: false, completion: nil)
     }
     
 }
