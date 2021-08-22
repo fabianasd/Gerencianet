@@ -74,7 +74,7 @@
                                     <action selector="openAccountController:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="PvQ-Ts-pYa"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="TopLeft" distribution="fillEqually" alignment="center" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RX8-5p-DHb">
+                            <stackView opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RX8-5p-DHb">
                                 <rect key="frame" x="16" y="522" width="343" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jMA-94-Tto">
@@ -87,7 +87,7 @@
                                                 <fragment content="Precisa de ajuda?">
                                                     <attributes>
                                                         <font key="NSFont" metaFont="system" size="18"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -104,7 +104,7 @@
                                                 <fragment content="PIX">
                                                     <attributes>
                                                         <font key="NSFont" metaFont="system" size="18"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -122,7 +122,7 @@
                                                     <attributes>
                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <font key="NSFont" metaFont="system" size="18"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143.19999999999999" y="106.59670164917542"/>
+            <point key="canvasLocation" x="156" y="110"/>
         </scene>
         <!--Access Account Controller-->
         <scene sceneID="uM9-mm-KRg">
@@ -357,9 +357,6 @@
                                                 <color key="tintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                <connections>
-                                                    <action selector="cpfcnpjTextField:" destination="Mte-O8-swR" eventType="editingDidBegin" id="oSf-Q0-uz5"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -411,7 +408,6 @@
                         <outlet property="cardConstraints" destination="xx9-HM-7Mb" id="WyN-h8-O0Y"/>
                         <outlet property="cardView" destination="UJt-2E-ZXr" id="B7x-Hp-r2P"/>
                         <outlet property="cardViewLine" destination="BX8-oJ-Zfg" id="anh-Gv-HYw"/>
-                        <outlet property="cpfcnpfTextField" destination="o48-An-Xe5" id="FhC-U8-nH7"/>
                         <outlet property="dimmerView" destination="Tah-Mh-muI" id="dJy-LW-VsO"/>
                         <outlet property="imagePrint" destination="uXS-5j-jy6" id="PK8-gZ-IJe"/>
                         <outlet property="labelCPFCNPJ" destination="6b5-D2-O0o" id="woj-Xt-JMt"/>
