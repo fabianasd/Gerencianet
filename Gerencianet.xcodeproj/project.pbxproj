@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C4F0DF726CC9F7900B953A8 /* DesignableSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F0DF626CC9F7900B953A8 /* DesignableSegmentControl.swift */; };
 		0C7A185526BF5CE600F8500C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A185426BF5CE600F8500C /* AppDelegate.swift */; };
 		0C7A185726BF5CE600F8500C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A185626BF5CE600F8500C /* SceneDelegate.swift */; };
 		0C7A185926BF5CE600F8500C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A185826BF5CE600F8500C /* ViewController.swift */; };
@@ -16,8 +17,10 @@
 		0C7A186426BF5CEB00F8500C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A186226BF5CEB00F8500C /* LaunchScreen.storyboard */; };
 		0C7A186F26BF5CEB00F8500C /* GerencianetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A186E26BF5CEB00F8500C /* GerencianetTests.swift */; };
 		0C7A187A26BF5CEB00F8500C /* GerencianetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A187926BF5CEB00F8500C /* GerencianetUITests.swift */; };
+		0C7FF3E126D2B89B00778A97 /* AcessAccountPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7FF3E026D2B89B00778A97 /* AcessAccountPasswordController.swift */; };
+		0C82324D26CB49C7000CF016 /* OpenAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C82324C26CB49C7000CF016 /* OpenAccountController.swift */; };
 		0CAE6DA526C6082C0041418B /* UIView+Snapshot..swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE6DA426C6082C0041418B /* UIView+Snapshot..swift */; };
-		0CAE6DA726C60E0C0041418B /* ReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE6DA626C60E0C0041418B /* ReactionViewController.swift */; };
+		0CAE6DA726C60E0C0041418B /* AccessAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAE6DA626C60E0C0041418B /* AccessAccountController.swift */; };
 		0CF051F026C0C15900CBB5AE /* PageControlController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF051EF26C0C15900CBB5AE /* PageControlController.swift */; };
 		0CF051F526C0C54C00CBB5AE /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF051F426C0C54C00CBB5AE /* Slide.swift */; };
 		0CF051F726C0C5A600CBB5AE /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF051F626C0C5A600CBB5AE /* Slide.xib */; };
@@ -41,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C4F0DF626CC9F7900B953A8 /* DesignableSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableSegmentControl.swift; sourceTree = "<group>"; };
 		0C7A185126BF5CE600F8500C /* Gerencianet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gerencianet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7A185426BF5CE600F8500C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C7A185626BF5CE600F8500C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +60,10 @@
 		0C7A187526BF5CEB00F8500C /* GerencianetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GerencianetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7A187926BF5CEB00F8500C /* GerencianetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerencianetUITests.swift; sourceTree = "<group>"; };
 		0C7A187B26BF5CEB00F8500C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C7FF3E026D2B89B00778A97 /* AcessAccountPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessAccountPasswordController.swift; sourceTree = "<group>"; };
+		0C82324C26CB49C7000CF016 /* OpenAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAccountController.swift; sourceTree = "<group>"; };
 		0CAE6DA426C6082C0041418B /* UIView+Snapshot..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Snapshot..swift"; sourceTree = "<group>"; };
-		0CAE6DA626C60E0C0041418B /* ReactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionViewController.swift; sourceTree = "<group>"; };
+		0CAE6DA626C60E0C0041418B /* AccessAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessAccountController.swift; sourceTree = "<group>"; };
 		0CF051EF26C0C15900CBB5AE /* PageControlController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlController.swift; sourceTree = "<group>"; };
 		0CF051F426C0C54C00CBB5AE /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		0CF051F626C0C5A600CBB5AE /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
@@ -122,7 +128,10 @@
 				0C7A186526BF5CEB00F8500C /* Info.plist */,
 				0C7A185D26BF5CE600F8500C /* Gerencianet.xcdatamodeld */,
 				0CAE6DA426C6082C0041418B /* UIView+Snapshot..swift */,
-				0CAE6DA626C60E0C0041418B /* ReactionViewController.swift */,
+				0CAE6DA626C60E0C0041418B /* AccessAccountController.swift */,
+				0C82324C26CB49C7000CF016 /* OpenAccountController.swift */,
+				0C4F0DF626CC9F7900B953A8 /* DesignableSegmentControl.swift */,
+				0C7FF3E026D2B89B00778A97 /* AcessAccountPasswordController.swift */,
 			);
 			path = Gerencianet;
 			sourceTree = "<group>";
@@ -287,12 +296,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CAE6DA526C6082C0041418B /* UIView+Snapshot..swift in Sources */,
+				0C4F0DF726CC9F7900B953A8 /* DesignableSegmentControl.swift in Sources */,
 				0C7A185926BF5CE600F8500C /* ViewController.swift in Sources */,
+				0C7FF3E126D2B89B00778A97 /* AcessAccountPasswordController.swift in Sources */,
 				0C7A185F26BF5CE600F8500C /* Gerencianet.xcdatamodeld in Sources */,
-				0CAE6DA726C60E0C0041418B /* ReactionViewController.swift in Sources */,
+				0CAE6DA726C60E0C0041418B /* AccessAccountController.swift in Sources */,
 				0CF051F026C0C15900CBB5AE /* PageControlController.swift in Sources */,
 				0CF051F526C0C54C00CBB5AE /* Slide.swift in Sources */,
 				0C7A185526BF5CE600F8500C /* AppDelegate.swift in Sources */,
+				0C82324D26CB49C7000CF016 /* OpenAccountController.swift in Sources */,
 				0C7A185726BF5CE600F8500C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +478,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Gerencianet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -474,6 +488,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabiana.Gerencianet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -483,7 +498,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Gerencianet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -491,6 +508,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabiana.Gerencianet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

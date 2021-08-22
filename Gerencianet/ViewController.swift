@@ -55,7 +55,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         self.present(reactionVC, animated: false, completion: nil)
     }
     
-    @IBAction func openAccountController(_ sender: Any) {
+    @IBAction func openAccountController(_ sender: UIButton) {
         guard let reactionVC = storyboard?.instantiateViewController(withIdentifier: "OpenAccountController")
                    as? OpenAccountController else {
                        
