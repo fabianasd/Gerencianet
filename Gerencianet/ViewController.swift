@@ -33,6 +33,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0
         view.bringSubviewToFront(pageControl)
+        
+        accessAccountButton.layer.cornerRadius = 5
+        openAccountButton.layer.cornerRadius = 5
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,17 +61,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func openAccountController(_ sender: UIButton) {
         guard let reactionVC = storyboard?.instantiateViewController(withIdentifier: "OpenAccountController")
-                   as? OpenAccountController else {
-                       
-                       assertionFailure("No view controller ID OpenAccountController in storyboard")
-                       return
-               }
-               
-               // set the modal presentation to full screen, in iOS 13, its no longer full screen by default
-               reactionVC.backingImage = self.view.asImage()
-               
-               // present the view controller modally without animation
-               self.present(reactionVC, animated: false, completion: nil)
+            as? OpenAccountController else {
+                
+                assertionFailure("No view controller ID OpenAccountController in storyboard")
+                return
+        }
+        
+        // set the modal presentation to full screen, in iOS 13, its no longer full screen by default
+        reactionVC.backingImage = self.view.asImage()
+        
+        // present the view controller modally without animation
+        self.present(reactionVC, animated: false, completion: nil)
     }
     
     func createSlides() -> [Slide] {

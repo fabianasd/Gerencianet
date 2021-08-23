@@ -59,7 +59,7 @@ class AcessAccountPasswordController: UIViewController {
             NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 11.0)!,
             .foregroundColor : UIColor.systemBlue,
         ]
-
+        
         let regularAttributeTermos = [
             NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Light", size: 11.0)!
         ]
@@ -96,7 +96,7 @@ class AcessAccountPasswordController: UIViewController {
         
         lineCard.clipsToBounds = true
         lineCard.layer.cornerRadius = 3
-
+        
         let myColor = UIColor.orange
         passwordTextField.layer.borderColor = myColor.cgColor
         passwordTextField.layer.cornerRadius = 5
@@ -170,17 +170,6 @@ class AcessAccountPasswordController: UIViewController {
     }
     
     @IBAction func backButton(_ sender: UIButton) {
-        print("aquii")
-        guard let reactionVC = storyboard?.instantiateViewController(withIdentifier: "AccessAccountController")
-            as? AccessAccountController else {
-                
-                assertionFailure("No view controller ID AccessCountController in storyboard")
-                return
-        }
-        
-        reactionVC.backingImage = self.view.asImage()
-        
-        self.present(reactionVC, animated: false, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
-    
 }
