@@ -16,6 +16,7 @@ class AccessAccountController: UIViewController {
     @IBOutlet weak var cardLine: UIView!
     @IBOutlet weak var cardConstraint: NSLayoutConstraint!
     @IBOutlet weak var labelCPFEmail: UILabel!
+    @IBOutlet weak var textFieldCPFEmail: UITextField!
     @IBOutlet weak var avancarButton: UIButton!
     
     var backingImage: UIImage?
@@ -23,6 +24,7 @@ class AccessAccountController: UIViewController {
     override func viewDidLoad() {
         configLabel()
         configCard()
+       // configBorder()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,7 +67,11 @@ class AccessAccountController: UIViewController {
         
         cardLine.clipsToBounds = true
         cardLine.layer.cornerRadius = 3
-        cardLine.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        
+        let myColor = UIColor.orange
+        textFieldCPFEmail.layer.borderColor = myColor.cgColor
+        textFieldCPFEmail.layer.cornerRadius = 5
+        textFieldCPFEmail.layer.borderWidth = 1.0
         
         if let safeAreaHeight = UIApplication.shared.keyWindow?.safeAreaLayoutGuide.layoutFrame.size.height,
             let bottomPadding = UIApplication.shared.keyWindow?.safeAreaInsets.bottom {
@@ -82,9 +88,8 @@ class AccessAccountController: UIViewController {
     @IBAction func dimmerViewTapped(_ tapRecognizer: UITapGestureRecognizer) {
         hideCardAndGoBack()
     }
-    
-    private func hideCardAndGoBack() {
         
+    private func hideCardAndGoBack() {
         self.view.layoutIfNeeded()
         
         if let safeAreaHeight = UIApplication.shared.keyWindow?.safeAreaLayoutGuide.layoutFrame.size.height,

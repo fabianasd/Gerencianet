@@ -274,6 +274,7 @@
                         <outlet property="dimmer" destination="RFk-1f-8eQ" id="9YQ-Oc-BvB"/>
                         <outlet property="imageView" destination="Zzp-9g-XrW" id="Yh7-Ze-rlD"/>
                         <outlet property="labelCPFEmail" destination="CTQ-Kc-UYg" id="Mpx-bf-Lat"/>
+                        <outlet property="textFieldCPFEmail" destination="GuJ-5h-rwK" id="4t2-Ek-IZi"/>
                         <outlet property="viewCard" destination="gIw-Dl-9pc" id="ETy-ES-nM9"/>
                     </connections>
                 </viewController>
@@ -408,6 +409,7 @@
                         <outlet property="cardConstraints" destination="xx9-HM-7Mb" id="WyN-h8-O0Y"/>
                         <outlet property="cardView" destination="UJt-2E-ZXr" id="B7x-Hp-r2P"/>
                         <outlet property="cardViewLine" destination="BX8-oJ-Zfg" id="anh-Gv-HYw"/>
+                        <outlet property="cpfcnpfTextField" destination="o48-An-Xe5" id="mG7-Ds-lcS"/>
                         <outlet property="dimmerView" destination="Tah-Mh-muI" id="dJy-LW-VsO"/>
                         <outlet property="imagePrint" destination="uXS-5j-jy6" id="PK8-gZ-IJe"/>
                         <outlet property="labelCPFCNPJ" destination="6b5-D2-O0o" id="woj-Xt-JMt"/>
@@ -435,7 +437,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vdw-Zd-CLK">
-                                        <rect key="frame" x="147.5" y="244" width="80" height="6"/>
+                                        <rect key="frame" x="147.5" y="247" width="80" height="6"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="q26-sF-5DR"/>
@@ -449,7 +451,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vqa-tI-XNH">
-                                <rect key="frame" x="0.0" y="259" width="375" height="408"/>
+                                <rect key="frame" x="0.0" y="262" width="375" height="405"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="center" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="haO-dB-tBV">
                                         <rect key="frame" x="8" y="8" width="365" height="78"/>
@@ -546,7 +548,7 @@
                             <constraint firstItem="Zwc-vK-apK" firstAttribute="bottom" secondItem="a1e-TH-p61" secondAttribute="bottom" id="Rd5-fT-mIj"/>
                             <constraint firstItem="Zwc-vK-apK" firstAttribute="top" secondItem="a1e-TH-p61" secondAttribute="top" id="Tif-uB-JdD"/>
                             <constraint firstItem="Vqa-tI-XNH" firstAttribute="top" secondItem="Vdw-Zd-CLK" secondAttribute="bottom" constant="9" id="V49-Uf-SDW"/>
-                            <constraint firstItem="Vqa-tI-XNH" firstAttribute="top" secondItem="74Z-jT-Gef" secondAttribute="top" constant="259" id="WEY-2n-pFd"/>
+                            <constraint firstItem="Vqa-tI-XNH" firstAttribute="top" secondItem="74Z-jT-Gef" secondAttribute="top" constant="262" id="WEY-2n-pFd"/>
                             <constraint firstItem="74Z-jT-Gef" firstAttribute="trailing" secondItem="sZd-hn-yGV" secondAttribute="trailing" id="ZDd-nw-sov"/>
                             <constraint firstItem="74Z-jT-Gef" firstAttribute="trailing" secondItem="Vqa-tI-XNH" secondAttribute="trailing" id="bUN-5q-gnr"/>
                             <constraint firstItem="74Z-jT-Gef" firstAttribute="trailing" secondItem="Zwc-vK-apK" secondAttribute="trailing" id="dlg-De-56C"/>
@@ -568,6 +570,7 @@
                         <outlet property="labelPassword" destination="zGf-3r-Zta" id="6mP-sO-f8x"/>
                         <outlet property="labelTermosDeUso" destination="EsN-fA-Ozc" id="pBZ-8K-gas"/>
                         <outlet property="lineCard" destination="Vdw-Zd-CLK" id="FVx-n4-y1K"/>
+                        <outlet property="passwordTextField" destination="Gk1-uH-zA6" id="9eK-ho-fLR"/>
                         <outlet property="viewDimmer" destination="sZd-hn-yGV" id="cx9-aW-40r"/>
                     </connections>
                 </viewController>

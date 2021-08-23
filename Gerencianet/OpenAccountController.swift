@@ -22,6 +22,8 @@ class OpenAccountController: UIViewController {
     @IBOutlet weak var labelCPFCNPJ: UILabel!
     @IBOutlet weak var labelOpenAccount: UILabel!
     
+    @IBOutlet weak var cpfcnpfTextField: UITextField!
+    
     var backingImage: UIImage?
     
     override func viewDidLoad() {
@@ -32,7 +34,7 @@ class OpenAccountController: UIViewController {
         super.viewDidAppear(animated)
         showCard()
     }
-    
+
     @IBAction func segmentedControl(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex
         {
@@ -76,7 +78,11 @@ class OpenAccountController: UIViewController {
         
         cardViewLine.clipsToBounds = true
         cardViewLine.layer.cornerRadius = 3
-        cardViewLine.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+    
+        let myColor = UIColor.orange
+        cpfcnpfTextField.layer.borderColor = myColor.cgColor
+        cpfcnpfTextField.layer.cornerRadius = 5
+        cpfcnpfTextField.layer.borderWidth = 1.0
         
         // hide the card view at the bottom when the View first load
         if let safeAreaHeight = UIApplication.shared.keyWindow?.safeAreaLayoutGuide.layoutFrame.size.height,
@@ -171,6 +177,4 @@ class OpenAccountController: UIViewController {
         // run the animation
         showCard.startAnimation()
     }
-
 }
-

@@ -18,6 +18,7 @@ class AcessAccountPasswordController: UIViewController {
     @IBOutlet weak var cardConstraint: NSLayoutConstraint!
     @IBOutlet weak var labelPassword: UILabel!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var labelTermosDeUso: UILabel!
     
     var backingImage: UIImage?
@@ -95,7 +96,11 @@ class AcessAccountPasswordController: UIViewController {
         
         lineCard.clipsToBounds = true
         lineCard.layer.cornerRadius = 3
-        lineCard.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+
+        let myColor = UIColor.orange
+        passwordTextField.layer.borderColor = myColor.cgColor
+        passwordTextField.layer.cornerRadius = 5
+        passwordTextField.layer.borderWidth = 1.0
         
         if let safeAreaHeight = UIApplication.shared.keyWindow?.safeAreaLayoutGuide.layoutFrame.size.height,
             let bottomPadding = UIApplication.shared.keyWindow?.safeAreaInsets.bottom {
