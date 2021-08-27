@@ -19,7 +19,7 @@ import UIKit
             }
             set {
                 let unselectedAttributes = [NSAttributedString.Key.foregroundColor: newValue,
-                                            NSAttributedString.Key.font:  UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.regular)]
+                                            NSAttributedString.Key.font:  UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.bold)]
                 self.setTitleTextAttributes(unselectedAttributes, for: .normal)
                 self.setTitleTextAttributes(unselectedAttributes, for: .selected)
             }

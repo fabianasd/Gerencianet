@@ -27,15 +27,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        slides = createSlides()
-        setupSlideScrollView(slides: slides)
-        
-        pageControl.numberOfPages = slides.count
-        pageControl.currentPage = 0
-        view.bringSubviewToFront(pageControl)
-        
-        accessAccountButton.layer.cornerRadius = 5
-        openAccountButton.layer.cornerRadius = 5
+//        slides = createSlides()
+//        setupSlideScrollView(slides: slides)
+//        
+//        pageControl.numberOfPages = slides.count
+//        pageControl.currentPage = 0
+//        view.bringSubviewToFront(pageControl)
+//        
+//        accessAccountButton.layer.cornerRadius = 5
+//        openAccountButton.layer.cornerRadius = 5
         
     }
     
@@ -216,14 +216,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     
     func setupSlideScrollView(slides : [Slide]) {
-        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
-        scrollView.isPagingEnabled = true
-        
-        for i in 0 ..< slides.count {
-            slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
-            scrollView.addSubview(slides[i])
-        }
+//        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+//        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
+//        scrollView.isPagingEnabled = true
+//
+//        for i in 0 ..< slides.count {
+//            slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
+//            scrollView.addSubview(slides[i])
+//        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

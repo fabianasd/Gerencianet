@@ -24,7 +24,6 @@ class AccessAccountController: UIViewController {
     override func viewDidLoad() {
         configLabel()
         configCard()
-       // configBorder()
     }
     
     override func viewDidAppear(_ animated: Bool) {
