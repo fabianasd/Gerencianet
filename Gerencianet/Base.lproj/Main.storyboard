@@ -10,20 +10,20 @@
         <!--Home-->
         <scene sceneID="JRB-uM-huO">
             <objects>
-                <viewController id="7oL-AQ-jI7" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController id="7oL-AQ-jI7" customClass="HomeViewController" customModule="Gerencianet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tki-ad-ieS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="d17-KV-1a6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="XLt-Dc-UuU">
-                        <barButtonItem key="leftBarButtonItem" image="list.dash" catalog="system" style="plain" id="Mtk-lA-tpe">
-                            <connections>
-                                <action selector="didTapMenuButton:" destination="7oL-AQ-jI7" id="ejE-fQ-xPS"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="list.dash" catalog="system" style="plain" id="Mtk-lA-tpe"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sideMenuBtn" destination="Mtk-lA-tpe" id="X4r-ws-kUe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vc-lF-o84" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -610,6 +610,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="avK-pY-ZBU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -623,20 +628,20 @@
         <!--Atualização cadastral-->
         <scene sceneID="rfB-Vg-Pva">
             <objects>
-                <viewController id="mvI-P0-gWG" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController id="mvI-P0-gWG" customClass="AtualizacaoCadastralViewController" customModule="Gerencianet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="64D-Jm-gS2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="g8T-i4-jcD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Atualização cadastral" id="XbQ-xk-wb5">
-                        <barButtonItem key="leftBarButtonItem" image="list.dash" catalog="system" style="plain" id="cVg-9g-JZJ">
-                            <connections>
-                                <action selector="didTapMenuButton:" destination="mvI-P0-gWG" id="l0n-kI-bKq"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="list.dash" catalog="system" style="plain" id="cVg-9g-JZJ"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sideMenuBtn" destination="cVg-9g-JZJ" id="UlY-i2-qGM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C2u-m3-gde" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -650,6 +655,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xy2-8d-W7e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.49485838409999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -671,16 +680,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JPe-Rb-PQ3">
                                 <rect key="frame" x="0.0" y="0.0" width="260" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Q5Z-WS-7x4">
-                                        <rect key="frame" x="0.0" y="28" width="260" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q5Z-WS-7x4" id="XxO-cQ-qvw">
-                                            <rect key="frame" x="0.0" y="0.0" width="260" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.94688588380813599" green="0.47246497869491577" blue="0.02276545949280262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -693,10 +692,13 @@
                         <viewLayoutGuide key="safeArea" id="e6a-e5-cEz"/>
                     </view>
                     <size key="freeformSize" width="260" height="667"/>
+                    <connections>
+                        <outlet property="sideMenuTableView" destination="JPe-Rb-PQ3" id="MHG-dC-2Vp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V9Q-33-CWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2200" y="381.85907046476763"/>
+            <point key="canvasLocation" x="2200" y="-1661"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="n1x-Ba-gAp">
@@ -706,12 +708,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="bD3-UR-OML"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcJ-Ju-6GA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2882" y="382"/>
+            <point key="canvasLocation" x="2881" y="-1661"/>
         </scene>
     </scenes>
     <resources>
